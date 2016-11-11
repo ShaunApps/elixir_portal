@@ -1,6 +1,8 @@
 # Portal
 
-**TODO: Add description**
+This is my version of Jose Valim's Portal app when starting Elixir. Added Portal.push_left and method and tests.
+
+
 
 ## Installation
 
@@ -21,4 +23,3 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
       [applications: [:portal]]
     end
     ```
-
