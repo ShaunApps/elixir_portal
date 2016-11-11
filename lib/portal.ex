@@ -47,12 +47,22 @@ defmodule Portal do
     portal
   end
 
+  def push_left(portal) do
+    # pop data from the right to the left
+    case Portal.Door.pop(portal.right) do
+      :error -> :ok
+      {:ok, h} -> Portal.Door.push(portal.left, h)
+    end
+    portal
+  end
+
   @doc """
   Shoots a new door with the given `color`.
   """
   def shoot(color) do
     Supervisor.start_child(Portal.Supervisor, [color])
   end
+
 end
 
 defimpl Inspect, for: Portal do
